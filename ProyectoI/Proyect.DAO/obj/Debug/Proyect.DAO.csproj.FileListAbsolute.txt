@@ -1,0 +1,10 @@
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\obj\Debug\Proyect.DAO.csprojAssemblyReference.cache
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\obj\Debug\Proyect.DAO.csproj.CoreCompileInputs.cache
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\bin\Debug\Proyect.DAO.dll
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\bin\Debug\Proyect.DAO.pdb
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\bin\Debug\Proyect.BO.dll
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\bin\Debug\Proyect.BO.pdb
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\obj\Debug\Proyect.DAO.csproj.CopyComplete
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\obj\Debug\Proyect.DAO.dll
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\obj\Debug\Proyect.DAO.pdb
+C:\Users\Juan.P.Irons\Desktop\Topicos2\ProyectoI\Proyect.DAO\bin\Debug\Proyect.DAO.dll.config
