@@ -12,7 +12,7 @@ namespace Proyect.DAO.Config {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
     public sealed partial class Conf : global::System.Configuration.ApplicationSettingsBase {
         
         private static Conf defaultInstance = ((Conf)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Conf())));
@@ -93,6 +93,160 @@ namespace Proyect.DAO.Config {
         public string Valor {
             get {
                 return ((string)(this["Valor"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Empresa")]
+        public string GetEmpresa {
+            get {
+                return ((string)(this["GetEmpresa"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Empleado")]
+        public string GetEmpleado {
+            get {
+                return ((string)(this["GetEmpleado"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Campaña")]
+        public string GetCampaña {
+            get {
+                return ((string)(this["GetCampaña"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Usuario")]
+        public string GetUsuario {
+            get {
+                return ((string)(this["GetUsuario"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Persona")]
+        public string GetPersona {
+            get {
+                return ((string)(this["GetPersona"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from RegistroSalud")]
+        public string GetRegistroSalud {
+            get {
+                return ((string)(this["GetRegistroSalud"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select * from Logs")]
+        public string GetLogs {
+            get {
+                return ((string)(this["GetLogs"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Empleado values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\')")]
+        public string SetEmpleado {
+            get {
+                return ((string)(this["SetEmpleado"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("delete from Empleado where IdEmpleado = \'{0}\'")]
+        public string DelEmpleado {
+            get {
+                return ((string)(this["DelEmpleado"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Empresa values (\'{0}\',\'{1}\',\'{2}\',\'{3}\')")]
+        public string SetEmpresa {
+            get {
+                return ((string)(this["SetEmpresa"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("delete from Empresa where RutEmpresa = \'{0}\'")]
+        public string DelEmpresa {
+            get {
+                return ((string)(this["DelEmpresa"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Campaña values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\')")]
+        public string SetCampaña {
+            get {
+                return ((string)(this["SetCampaña"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("delete from Campaña where IdCampaña = \'{0}\'")]
+        public string DelCampaña {
+            get {
+                return ((string)(this["DelCampaña"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Usuario values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\')")]
+        public string SetUsuario {
+            get {
+                return ((string)(this["SetUsuario"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("delete from Usuario where IdUsuario = \'{0}\'")]
+        public string DelUsuario {
+            get {
+                return ((string)(this["DelUsuario"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into RegistroSalud values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',\'{7}\'" +
+            ",\'{8}\',\'{9}\',\'{10}\',\'{11}\',\'{12}\')")]
+        public string SetRegistro {
+            get {
+                return ((string)(this["SetRegistro"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("delete from RegistroSalud where IdRegistro = \'{0}\'")]
+        public string DelRegistro {
+            get {
+                return ((string)(this["DelRegistro"]));
             }
         }
     }

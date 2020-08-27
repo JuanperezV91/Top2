@@ -26,5 +26,56 @@
     <Setting Name="Valor" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="GetEmpresa" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Empresa</Value>
+    </Setting>
+    <Setting Name="GetEmpleado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Empleado</Value>
+    </Setting>
+    <Setting Name="GetCampaña" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Campaña</Value>
+    </Setting>
+    <Setting Name="GetUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Usuario</Value>
+    </Setting>
+    <Setting Name="GetPersona" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Persona</Value>
+    </Setting>
+    <Setting Name="GetRegistroSalud" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from RegistroSalud</Value>
+    </Setting>
+    <Setting Name="GetLogs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select * from Logs</Value>
+    </Setting>
+    <Setting Name="SetEmpleado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">insert into Empleado values ('{0}','{1}','{2}','{3}','{4}')</Value>
+    </Setting>
+    <Setting Name="DelEmpleado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from Empleado where IdEmpleado = '{0}'</Value>
+    </Setting>
+    <Setting Name="SetEmpresa" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">insert into Empresa values ('{0}','{1}','{2}','{3}')</Value>
+    </Setting>
+    <Setting Name="DelEmpresa" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from Empresa where RutEmpresa = '{0}'</Value>
+    </Setting>
+    <Setting Name="SetCampaña" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">insert into Campaña values ('{0}','{1}','{2}','{3}','{4}')</Value>
+    </Setting>
+    <Setting Name="DelCampaña" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from Campaña where IdCampaña = '{0}'</Value>
+    </Setting>
+    <Setting Name="SetUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">insert into Usuario values ('{0}','{1}','{2}','{3}','{4}')</Value>
+    </Setting>
+    <Setting Name="DelUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from Usuario where IdUsuario = '{0}'</Value>
+    </Setting>
+    <Setting Name="SetRegistro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">insert into RegistroSalud values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')</Value>
+    </Setting>
+    <Setting Name="DelRegistro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from RegistroSalud where IdRegistro = '{0}'</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

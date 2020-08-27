@@ -12,7 +12,7 @@ using System.Data;
 
 namespace Proyect.DAO
 {
-    public class ConexionDao
+    public class ConexionDAO
     {
         static String config;
         int idLogCount;

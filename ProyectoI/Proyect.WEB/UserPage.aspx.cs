@@ -16,7 +16,7 @@ namespace Proyect.WEB
 {
     public partial class UserPage : System.Web.UI.Page
     {
-        ConexionDao conexion = new ConexionDao();
+        ConexionDAO conexion = new ConexionDAO();
         Conf oconf = new Conf();
 
 

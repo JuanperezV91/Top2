@@ -22,7 +22,7 @@ namespace Proyect.WEB
         public static string idUsers;
         int idLog;
 
-        ConexionDao conexion = new ConexionDao();
+        ConexionDAO conexion = new ConexionDAO();
         Usuario usuario = new Usuario();
         LogUsuario log = new LogUsuario();
         Conf oconf = new Conf();
@@ -89,7 +89,7 @@ namespace Proyect.WEB
                 UserType = dataTable.Rows[0][3].ToString();
                 ;
 
-                ConexionDao dao = new ConexionDao();
+                ConexionDAO dao = new ConexionDAO();
 
                 if (UserType == "Admin")
                 {

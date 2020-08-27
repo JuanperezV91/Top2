@@ -17,7 +17,7 @@ namespace Proyect.WEB
 {
     public partial class AdminPage : System.Web.UI.Page
     {
-        ConexionDao conexion = new ConexionDao();
+        ConexionDAO conexion = new ConexionDAO();
         Conf oconf = new Conf();
 
         protected void Page_Load(object sender, EventArgs e)

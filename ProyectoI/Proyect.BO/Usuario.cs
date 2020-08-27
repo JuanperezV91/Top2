@@ -17,6 +17,7 @@ namespace Proyect.BO
         String _email;
         String _rolUsuario;
         String _sexo;
+        int _idPersona;
 
         public string NombreUser { get => _nombreUser; set => _nombreUser = value; }
         public string Sexo { get => _sexo; set => _sexo = value; }
@@ -27,5 +28,6 @@ namespace Proyect.BO
         public string Email { get => _email; set => _email = value; }
         public string RolUsuario { get => _rolUsuario; set => _rolUsuario = value; }
         public int IdUser { get => _idUser; set => _idUser = value; }
+        public int IdPersona { get => _idPersona; set => _idPersona = value; }
     }
 }

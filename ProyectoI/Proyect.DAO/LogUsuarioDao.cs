@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Proyect.DAO
 {
-    public class LogUsuarioDao
+    public class LogUsuarioDAO
     {
         public List<LogUsuario> getLogUsuario()
         {

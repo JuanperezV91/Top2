@@ -17,7 +17,7 @@ namespace Proyect.WEB
 {
     public partial class SignUp : System.Web.UI.Page
     {
-        ConexionDao conexion = new ConexionDao();
+        ConexionDAO conexion = new ConexionDAO();
         Usuario usuario = new Usuario();
         Conf oconf = new Conf();
 
