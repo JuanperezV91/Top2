@@ -60,5 +60,11 @@ namespace Proyect.WEB
             Response.Redirect("~/SignUp.aspx");
 
         }
+
+        protected void RegistroSalud(object sender, GridViewCommandEventArgs e)
+        {
+            Response.Redirect("~/RegistroSalud.aspx");
+
+        }
     }
 }

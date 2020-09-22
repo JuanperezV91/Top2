@@ -32,7 +32,7 @@ namespace Proyect.WEB
             SqlConnection myConnection = new SqlConnection(con);
             usuario.Email = txtEmail.Text;
 
-            String value = "select * from Usuarios where Email='" + usuario.Email + "'";
+            String value = "select * from Usuario where Email='" + usuario.Email + "'";
 
             SqlCommand mycommand = new SqlCommand(value, myConnection);
             myConnection.Open();
@@ -49,10 +49,11 @@ namespace Proyect.WEB
                 cmd.ExecuteNonQuery();
 
                 //Enviar correo
-                String DireccionEmail = dataTable.Rows[0][6].ToString();
+                String DireccionEmail = dataTable.Rows[0][5].ToString();
                 String NombreUsuario = dataTable.Rows[0][1].ToString();
+                String CtñaUsuario = dataTable.Rows[0][2].ToString();
                 String CuerpoEmail = "Hola " + NombreUsuario + ", <br/><br/> Haga click en el siguiente link para ingresar una nueva contraseña <br/> http://localhost:59009/RecuperarPass.aspx?Uid="+ myGUID;
-                MailMessage PassRecMail = new MailMessage("juanantonioperezveas@gmail.com", DireccionEmail);
+                MailMessage PassRecMail = new MailMessage("youremail@gmail.com", DireccionEmail);
                 PassRecMail.Body = CuerpoEmail;
                 PassRecMail.IsBodyHtml = true;
                 PassRecMail.Subject = "Restablecer Contraseña";
@@ -60,8 +61,8 @@ namespace Proyect.WEB
                 SmtpClient SMTP = new SmtpClient("smtp.gmail.com", 587);
                 SMTP.Credentials = new NetworkCredential()
                 {
-                    UserName = "juanantonioperezveas@gmail.com",
-                    Password = "123"
+                    UserName = DireccionEmail,
+                    Password = CtñaUsuario
                 };
                 SMTP.EnableSsl = true;
                 SMTP.Send(PassRecMail);

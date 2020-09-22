@@ -25,8 +25,8 @@ namespace Proyect.DAO.Config {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Juan.P.Irons\\Documen" +
-            "ts\\ProyectoBD.mdf;Integrated Security=True;Connect Timeout=5000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\PC\\Desktop\\ProyectoI" +
+            "\\BD\\ProyectoBD.mdf;Integrated Security=True;Connect Timeout=5000")]
         public string con {
             get {
                 return ((string)(this["con"]));
@@ -161,7 +161,7 @@ namespace Proyect.DAO.Config {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("insert into Empleado values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\')")]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Empleado values(\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\')")]
         public string SetEmpleado {
             get {
                 return ((string)(this["SetEmpleado"]));
@@ -233,8 +233,8 @@ namespace Proyect.DAO.Config {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("insert into RegistroSalud values (\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',\'{7}\'" +
-            ",\'{8}\',\'{9}\',\'{10}\',\'{11}\',\'{12}\')")]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into RegistroSalud values(\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',\'{7}\'," +
+            "\'{8}\',\'{9}\',\'{10}\',\'{11}\',\'{12}\')")]
         public string SetRegistro {
             get {
                 return ((string)(this["SetRegistro"]));
@@ -247,6 +247,33 @@ namespace Proyect.DAO.Config {
         public string DelRegistro {
             get {
                 return ((string)(this["DelRegistro"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insert into Persona values(\'{0}\',\'{1}\',\'{2}\',\'{3}\',\'{4}\',\'{5}\',\'{6}\',\'{7}\')")]
+        public string SetPersona {
+            get {
+                return ((string)(this["SetPersona"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select isnull(max(cast(IdEmpleado as int)),0)+1 from Empleado")]
+        public string signEmpleado {
+            get {
+                return ((string)(this["signEmpleado"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("select isnull(max(cast(IdRegistro as int)),0)+1 from RegistroSalud")]
+        public string signRegS {
+            get {
+                return ((string)(this["signRegS"]));
             }
         }
     }

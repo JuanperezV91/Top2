@@ -29,8 +29,7 @@ namespace Proyect.WEB
         public static int IdLogValue;
        // Config.Conf conf = new Config.Conf();
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        {            
             
             if (!IsPostBack)
             {
@@ -51,15 +50,15 @@ namespace Proyect.WEB
             usuario.NombreUser = txtUsername.Text;
             usuario.PassUser = txtPassword.Text;
             //Conexion Establecida
+            myConnection.Open();
 
 
             sUsername = usuario.NombreUser;
             sUserPass = usuario.PassUser;
           //  log.Usuario.IdUser = usuario.IdUser;
-            String value = "select * from Usuario where NombreUsuario='" + usuario.NombreUser + "' and PassUsuario='" + usuario.PassUser + "'";
+            String value = "select * from Usuario where NombreUsuario='" + sUsername + "' and PassUsuario='" + sUserPass + "'";
 
             SqlCommand mycommand = new SqlCommand(value, myConnection);
-            myConnection.Open();
 
             SqlDataAdapter sda = new SqlDataAdapter(mycommand);
             DataTable dataTable = new DataTable();
@@ -114,6 +113,7 @@ namespace Proyect.WEB
 
                     conexion.RegistroLog(value2); // Llamamos al metodo que inserta nuevo log
 
+                    Session["IDUSUARIOACTUAL"] = idUsers;
 
                     Session["USERNAME"] = usuario.NombreUser;
                     Response.Redirect("~/AdminPage.aspx");            

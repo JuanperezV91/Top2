@@ -32,10 +32,10 @@ namespace Proyect.DAO
                         Empleado oEmpleado = new Empleado();
                         
                         oEmpleado.IdEmpleado = (int)oDbDataReader[0];
-                        oEmpleado.IdPersona = (int)oDbDataReader[1];
-                        oEmpleado.IdEmpresa = (int)oDbDataReader[2];
+                        oEmpleado.IdPersona = (int)oDbDataReader[1];                       
                         oEmpleado.Cargo = oDbDataReader[2].ToString();
                         oEmpleado.Area = oDbDataReader[3].ToString();
+                        oEmpleado.NombreEmpresa = oDbDataReader[4].ToString(); ;
 
                         lst.Add(oEmpleado);
                     }
@@ -65,7 +65,7 @@ namespace Proyect.DAO
             String con = oConfig.con;
             SqlConnection myConnection = new SqlConnection(con);
             SqlDataReader oDbDataReader = null;
-            String queryString = String.Format(oConfig.SetEmpleado, Empleado.IdEmpleado, Empleado.IdPersona, Empleado.IdEmpresa, Empleado.Cargo, Empleado.Area);
+            String queryString = String.Format(oConfig.SetEmpleado, Empleado.IdEmpleado, Empleado.IdPersona, Empleado.Cargo, Empleado.Area, Empleado.NombreEmpresa);
             myConnection.Open();
             SqlCommand mycommand = new SqlCommand(queryString, myConnection);
             oDbDataReader = mycommand.ExecuteReader();

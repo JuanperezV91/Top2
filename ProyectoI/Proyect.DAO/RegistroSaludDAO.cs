@@ -11,11 +11,11 @@ namespace Proyect.DAO
 {
     public class RegistroSaludDAO
     {
-        public List<RegistroSalud> GetRegistros()
+        public List<RegistroS> GetRegistros()
         {
             try
             {
-                List<RegistroSalud> lst = new List<RegistroSalud>();
+                List<RegistroS> lst = new List<RegistroS>();
                 Config.Conf oconf = new Config.Conf();
                 String con = oconf.con;
                 SqlConnection myConnection = new SqlConnection(con);
@@ -29,20 +29,21 @@ namespace Proyect.DAO
                 {
                     try
                     {
-                        RegistroSalud oRegistro = new RegistroSalud();
+                        RegistroS oRegistro = new RegistroS();
                         oRegistro.IdRegistro = (int) oDbDataReader[0];
                         oRegistro.IdUsuario = (int) oDbDataReader[1];
-                        oRegistro.IdEmpCampaña = (int) oDbDataReader[2];
-                        oRegistro.Temperatura = (int) oDbDataReader[3];
-                        oRegistro.TosSeca = (bool) oDbDataReader[4];
-                        oRegistro.RespRapida = (bool) oDbDataReader[5];
-                        oRegistro.FlemaAm = (bool) oDbDataReader[6];
-                        oRegistro.Diftrag = (bool) oDbDataReader[7];
-                        oRegistro.Cansfat = (bool) oDbDataReader[8];
-                        oRegistro.Dolmus = (bool) oDbDataReader[9];
-                        oRegistro.Doltor = (bool) oDbDataReader[10];
-                        oRegistro.TestV = (bool) oDbDataReader[11];
-                        oRegistro.Disfresp = (bool) oDbDataReader[12];
+                        oRegistro.Temperatura = (int) oDbDataReader[2];
+                        oRegistro.TosSeca = oDbDataReader[3].ToString();
+                        oRegistro.RespRapida = oDbDataReader[4].ToString();
+                        oRegistro.FlemaAm = oDbDataReader[5].ToString();
+                        oRegistro.Diftrag = oDbDataReader[6].ToString();
+                        oRegistro.Cansfat = oDbDataReader[7].ToString();
+                        oRegistro.Dolmus = oDbDataReader[8].ToString();
+                        oRegistro.Doltor = oDbDataReader[9].ToString();
+                        oRegistro.TestV =  oDbDataReader[10].ToString();
+                        oRegistro.Disfresp = oDbDataReader[11].ToString();
+                        oRegistro.IdEmpleado = (int) oDbDataReader[12];
+
 
                         lst.Add(oRegistro);
                     }
@@ -66,14 +67,14 @@ namespace Proyect.DAO
         }
 
         //Actualizar datos de un registro
-        public bool SetCampaña(RegistroSalud RegistroSalud)
+        public bool SetRegistroS(RegistroS RegistroSalud)
         {
             bool flag = false;
             Config.Conf oConfig = new Config.Conf();
             String con = oConfig.con;
             SqlConnection myConnection = new SqlConnection(con);
             SqlDataReader oDbDataReader = null;
-            String queryString = String.Format(oConfig.SetRegistro, RegistroSalud.IdRegistro, RegistroSalud.IdUsuario, RegistroSalud.IdEmpCampaña, RegistroSalud.Temperatura, RegistroSalud.TosSeca, RegistroSalud.RespRapida, RegistroSalud.FlemaAm, RegistroSalud.Diftrag, RegistroSalud.Cansfat, RegistroSalud.Dolmus, RegistroSalud.Doltor, RegistroSalud.TestV, RegistroSalud.Disfresp);
+            String queryString = String.Format(oConfig.SetRegistro, RegistroSalud.IdRegistro, RegistroSalud.IdUsuario, RegistroSalud.Temperatura, RegistroSalud.TosSeca, RegistroSalud.RespRapida, RegistroSalud.FlemaAm, RegistroSalud.Diftrag, RegistroSalud.Cansfat, RegistroSalud.Dolmus, RegistroSalud.Doltor, RegistroSalud.TestV, RegistroSalud.Disfresp, RegistroSalud.IdEmpleado);
             myConnection.Open();
             SqlCommand mycommand = new SqlCommand(queryString, myConnection);
             oDbDataReader = mycommand.ExecuteReader();
@@ -85,7 +86,7 @@ namespace Proyect.DAO
         }
 
         //Eliminar un registro por su id
-        public bool DelCampaña(int idRegistro)
+        public bool DelRegistroS(int idRegistro)
         {
             bool flag = false;
             Config.Conf oConfig = new Config.Conf();

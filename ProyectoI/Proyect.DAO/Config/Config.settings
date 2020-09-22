@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="con" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Juan.P.Irons\Documents\ProyectoBD.mdf;Integrated Security=True;Connect Timeout=30</Value>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\PC\Desktop\ProyectoI\BD\ProyectoBD.mdf;Integrated Security=True;Connect Timeout=5000</Value>
     </Setting>
     <Setting Name="Valor" Type="System.String" Scope="Application">
       <Value Profile="(Default)">select * from Usuario where NombreUser=@user and PassUser=@pass </Value>
